@@ -1,0 +1,128 @@
+// Primary Colors
+$green: hsl(75, 94%, 57%)
+
+// Neutral Colors
+$white: hsl(0, 0%, 100%)
+$grey: hsl(0, 0%, 20%)
+$dark_grey: hsl(0, 0%, 12%)
+$off_black: hsl(0, 0%, 8%)
+
+// Font sizes
+$paragraph_font: 14px
+
+// Font Families
+@font-face
+    font-family: 'Inter Light'
+    src: url('../assets/fonts/Inter_Variable.ttf')
+    font-weight: 400
+    font-style: normal
+
+@font-face
+    font-family: 'Inter Medium'
+    src: url('../assets/fonts/Inter_Variable.ttf')
+    font-weight: 600
+    font-style: normal
+
+@font-face
+    font-family: 'Inter Heavy'
+    src: url('../assets/fonts/Inter_Variable.ttf')
+    font-weight: 700
+    font-style: normal
+
+// Resets
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+*
+    margin: 0
+    padding: 0
+    scroll-behavior: smooth
+
+html
+    font-size: 62.5%
+
+img
+    width: 100%
+    height: auto
+    object-fit: cover
+
+body
+    position: relative
+    background: $off_black
+    font-family: 'Inter Light'
+    font-size: $paragraph_font
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    align-items: center
+    justify-content: center
+
+
+.container
+    background: $dark_grey
+    color: $white
+    width: 100%
+    max-width: 34rem
+    display: grid
+    grid-template-area: 'header' 'main' 'footer'
+    justify-items: center
+    padding: 3rem
+    gap: 2rem
+    border-radius: 12px
+
+@media screen and (min-width: 600px)
+    .container
+        max-width: 36rem
+
+header
+    grid-area: 'header'
+    img
+        max-width: 10rem
+        border-radius: 50%
+
+main
+    grid-area: 'main'
+
+.info-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1rem
+    margin-bottom: 3rem
+    h1
+        font-family: 'Inter Medium'
+        font-size: 2.4rem
+    p
+        font-family: 'Inter Medium'
+        color: $green
+
+.hobbies
+    margin-bottom: .5rem
+
+footer
+    grid-area: 'footer'
+    display: grid
+    gap: 1.5rem
+    width: 100%
+    a
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $grey
+        height: 4rem
+        border-radius: 8px
+        text-decoration: none
+        font-family: 'Inter Heavy'
+        font-size: 1.3rem
+        color: $white
+        transition: all 0.2s ease-in-out
+        &:hover
+            background: $green
+            color: $grey
+
+.attribution
+    position: fixed
+    bottom: 1rem
+        
